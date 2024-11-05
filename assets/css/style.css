@@ -42,13 +42,15 @@ p {
 }
 
 .section-title {
-	font-size: 4rem;
-	font-weight: 300;
+	font-size: 4rem !important;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
 	color: black;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 	text-align: center;
+	color: #006627;
 }
 
 .section-title span {
@@ -218,26 +220,29 @@ p {
 	font-weight: bold;
 	text-align: center;
 	display: block;
-
 	position: relative;
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
+	line-height: 1.1;
 }
 
 #hero h1:nth-child(1) {
+	font-weight: 900;
 	font-size: 4rem;
 	text-align: center;
 	margin-top: 150px;
 	animation-delay: 1s;
+	line-height: 1.1
 }
 
 #hero h1:nth-child(2) {
+	font-weight: 600;
 	font-size: 2.5rem;
 	text-align: center;
 	margin-top: 10px;
 	animation-delay: 2s;
-
+	line-height: 1.1
 }
 
 #hero h1:nth-child(3) {
@@ -245,7 +250,7 @@ p {
 	text-align: center;
 	margin-top: 10px;
 	animation-delay: 3s;
-
+	line-height: 1.1
 }
 
 #hero h2 {
@@ -258,6 +263,7 @@ p {
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 4s;
+	line-height: 1.1
 }
 
 
@@ -556,6 +562,8 @@ p {
 }
 
 #services .service-item h2 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
 	font-size: 2rem;
 	color: rgb(0, 0, 0);
 	margin-bottom: 10px;
@@ -569,99 +577,6 @@ p {
 
 /* End Services Section */
 
-/* Projects section */
-#projects .projects {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#projects .projects-header h1 {
-	margin-bottom: 50px;
-}
-
-#projects .all-projects {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#projects .project-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 80%;
-	margin: 20px auto;
-	overflow: hidden;
-	border-radius: 10px;
-}
-
-#projects .project-info {
-	padding: 30px;
-	flex-basis: 50%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	color: white;
-}
-
-#projects .project-info a {
-	margin-top: 1rem;
-	font-size: 1.4rem;
-	color: #ffff;
-	background-color: rgb(247, 222, 4);
-	padding: 10px;
-}
-
-#projects .project-info h1 {
-	font-size: 4rem;
-	font-weight: 500;
-}
-
-#projects .project-info h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	margin-top: 10px;
-}
-
-#projects .project-info p {
-
-	color: white;
-}
-
-#projects .project-img {
-	flex-basis: 50%;
-	height: 300px;
-	overflow: hidden;
-	position: relative;
-}
-
-#projects .project-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-
-#projects .project-img img {
-	transition: 0.3s ease transform;
-}
-
-#projects .project-item:hover .project-img img {
-	transform: scale(1.1);
-}
-
-/* End Projects section */
 
 /* Tradition Section */
 #tradition {
@@ -726,20 +641,7 @@ p {
 	/* Aumenta a imagem ao passar o mouse */
 }
 
-#tradition h1 {
-	font-size: 2.8rem;
-	/* Tamanho da fonte do título */
-	color: #006627;
-	/* Cor do texto mais escura */
-	margin: 20px 0;
-	/* Margens superior e inferior */
-	text-transform: uppercase;
-	/* Título em maiúsculas para ênfase */
-	letter-spacing: 1px;
-	/* Espaçamento entre letras */
-	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
-}
+
 
 #tradition p {
 	font-size: 1.8rem;
@@ -755,7 +657,8 @@ p {
 	margin: 10px auto;
 	/* Margem centralizada */
 	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
+	font-weight: 600;
+	text-align: justify;
 }
 
 /* Responsivo */
@@ -797,7 +700,7 @@ p {
 	/* Aumenta o tamanho da fonte do parágrafo */
 	font-weight: bold;
 	/* Deixa o texto mais grosso */
-	color: #000000;
+	color: #006627;
 	/* Cor do texto */
 	line-height: 1.7;
 	/* Altura da linha para melhor legibilidade */
@@ -806,8 +709,8 @@ p {
 	margin: 20px auto;
 	/* Margem centralizada */
 	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
-	/* Fonte para o parágrafo */
+	text-align: justify;
+	/* Justifica o texto */
 }
 
 #about .col-left {
@@ -967,6 +870,7 @@ p {
 	width: 30px;
 	height: 30px;
 }
+
 .facebook-icon img {
 	margin-right: 10px;
 	width: 40px;
@@ -1053,7 +957,7 @@ p {
 	}
 
 	h1.section-title {
-		font-size: 6rem;
+		font-size: 4rem;
 	}
 
 	/* Hero */
@@ -1266,17 +1170,27 @@ p {
 
 /* End  Media Query For Desktop */
 .whatsapp-button {
-    display: inline-block;
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    background-color: #25D366; /* Cor do WhatsApp */
-    color: white; /* Cor do texto */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove sublinhado do texto */
-    font-weight: bold; /* Texto em negrito */
-    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+	display: inline-block;
+	padding: 20px 30px;
+	/* Espaçamento interno do botão */
+	background-color: #25D366;
+	/* Cor do WhatsApp */
+	color: white;
+	/* Cor do texto */
+	border: none;
+	/* Sem borda */
+	border-radius: 5px;
+	/* Bordas arredondadas */
+	text-decoration: none;
+	/* Remove sublinhado do texto */
+	font-weight: bold;
+	/* Texto em negrito */
+	transition: background-color 0.3s ease;
+	/* Transição suave para mudança de cor */
+	font-size: 1.5rem;
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E; /* Cor do WhatsApp ao passar o mouse */
+	background-color: #128C7E;
+	/* Cor do WhatsApp ao passar o mouse */
 }

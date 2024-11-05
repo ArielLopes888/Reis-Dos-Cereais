@@ -23,7 +23,7 @@
 
 .menu h1 {
   font-size: 2.3rem;
-  color: var(--primary-color);
+  color: #006627;
 }
 
 .menu h1 a {
@@ -39,7 +39,7 @@
   display: block;
   padding: 2rem;
   font-size: 1.8rem;
-  color: var(--primary-color);
+  color: #006627;
   position: relative;
 }
 
@@ -103,7 +103,7 @@
     top: 2rem;
     right: 2rem;
     background: var(--primary-color);
-    color: var(--white-color);
+    color: #006627;
     font-size: 3rem;
     line-height: 3rem;
     width: 3rem;

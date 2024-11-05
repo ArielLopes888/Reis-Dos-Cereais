@@ -565,7 +565,7 @@ p {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 900;
 	font-size: 2rem;
-	color: rgb(0, 0, 0);
+	color: #006627;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
@@ -879,7 +879,7 @@ p {
 }
 
 #footer h2 {
-	color: rgb(0, 0, 0);
+	color: #006627;
 	font-weight: 500;
 	font-size: 1.8rem;
 	letter-spacing: 0.1rem;
@@ -888,7 +888,8 @@ p {
 }
 
 #footer p {
-	color: rgb(0, 0, 0);
+	color: #006627;
+	font-weight: 900;
 	font-size: 1.8rem;
 	margin: 0;
 	padding: 4rem;

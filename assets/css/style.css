@@ -240,7 +240,7 @@ p {
 	font-weight: 600;
 	font-size: 2.5rem;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 10px;
 	animation-delay: 2s;
 	line-height: 1.1
 }
@@ -248,20 +248,21 @@ p {
 #hero h1:nth-child(3) {
 	font-size: 2.5rem;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 50px !important; 
+	animation: text_reveal_h2 0.5s ease forwards;;
 	animation-delay: 3s;
 	line-height: 1.1
 }
 
 #hero h2 {
-	margin-top: 35px;
+	margin-top: 30px;
 	text-align: center;
 	display: block;
 	width: fit-content;
 	font-size: 2rem;
 	position: relative;
 	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
+	animation: text_reveal_h2 0.5s ease forwards;
 	animation-delay: 4s;
 	line-height: 1.1
 }
@@ -942,7 +943,12 @@ p {
 
 @keyframes text_reveal {
 	100% {
-		color: rgb(255, 255, 255);
+		color: #006627;
+	}
+}
+@keyframes text_reveal_h2 {
+	100% {
+		color: #f7f7f7;
 	}
 }
 

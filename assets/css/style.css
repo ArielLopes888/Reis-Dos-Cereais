@@ -99,7 +99,6 @@ p {
 
 /* Header section */
 #header {
-	position: fixed;
 	z-index: 1000;
 	left: 0;
 	top: 0;
@@ -109,7 +108,7 @@ p {
 
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.103);
+	background-color: #b8c444;
 	transition: 0.3s ease background-color;
 }
 
@@ -145,11 +144,12 @@ p {
 }
 
 #header .nav-list ul a {
-	font-size: 2.5rem;
-	font-weight: 500;
+	font-size: 5rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
-	color: rgb(0, 0, 0);
+	color: #006627;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
@@ -183,326 +183,307 @@ p {
 #hero {
 	height: 100vh;
 	text-align: center;
-	background-image: url(/assets/img/BACKGROUND\ PLANTAÇÃO\ DE\ FEIJÃO.jpg);
+	background-image: url(/assets/img/DOBRA\ 1\ -\ A.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
-	z-index: 1;
+	z-index: -1;
 	display: flex;
 	justify-content: flex-end;
+	padding-top: 60px;
+	/* Ajuste o valor conforme necessário */
 	padding-bottom: 40px;
-
 }
 
-#hero::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: #2bd60973;
-	/*background hero */
-	opacity: 0.7;
-	z-index: -1;
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+	#hero {
+		background-position: center;
+		height: auto;
+		/* Permite ajustar a altura automaticamente */
+		padding-top: 140px;
+		/* Maior espaçamento no topo */
+		padding-bottom: 20px;
+		/* Reduz o espaçamento inferior */
+	}
+
+	#hero img {
+		max-width: 90%;
+		/* Evita que a imagem ocupe toda a largura */
+		height: auto;
+		/* Mantém a proporção */
+		margin: 0 auto;
+	}
 }
 
-#hero .hero {
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
+@media (max-width: 480px) {
+	#hero {
+		padding-top: 120px;
+		/* Espaçamento maior em telas muito pequenas */
+		padding-bottom: 10px;
+	}
 }
-
-#hero h1 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
-	text-align: center;
-	display: block;
-	position: relative;
-	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
-	line-height: 1.3;
-}
-
-#hero h1:nth-child(1) {
-	font-weight: 900;
-	font-size: 4rem;
-	text-align: center;
-	margin-top: 200px;
-	animation-delay: 1s;
-	line-height: 1.1
-}
-
-#hero h1:nth-child(2) {
-	font-weight: 600;
-	font-size: 2.5rem;
-	text-align: center;
-	margin-top: 10px;
-	animation-delay: 2s;
-	line-height: 1.1
-}
-
-#hero h1:nth-child(3) {
-	font-size: 2.5rem;
-	text-align: center;
-	margin-top: 50px !important; 
-	animation: text_reveal_h2 0.5s ease forwards;;
-	animation-delay: 3s;
-	line-height: 1.1
-}
-
-#hero h2 {
-	margin-top: 30px;
-	text-align: center;
-	display: block;
-	width: fit-content;
-	font-size: 2rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal_h2 0.5s ease forwards;
-	animation-delay: 4s;
-	line-height: 1.1
-}
-
-
-.img-mascote {
-	width: 100%;
-	float: right;
-	margin-top: 150px;
-}
-
 
 /* End Hero Section */
 
-/* Products Section */
-/* General Styles for both sections */
-#products {
-	padding-bottom: 40px;
-	background-image: url(/assets/img/BACKGROUND\ PLANTAÇÃO\ DE\ FEIJÃO.jpg);
-	/* Imagem de fundo para produtos */
+/* Feijão Section */
+#feijão {
+	background-image: url('/assets/img/BACKGROUND\ BEIJÃO.png');
 	background-size: cover;
 	background-position: center;
-	display: flex;
-	justify-content: center;
-	position: relative;
-	border: 2px solid rgba(100, 255, 11, 0.568);
-	box-shadow: 0px 0px 10px rgb(17, 129, 3);
-	flex-wrap: wrap;
-	/* Permitir que os itens quebrem para a próxima linha em telas menores */
+	padding: 50px 20px;
+	text-align: center;
+	color: #ffffff;
 }
 
-#daFazendaCarousel {
-	padding-bottom: 40px;
-	background-image: url(/assets/img/BACKGROUND\ FARINHA\ DE\ MANDIOCA.png);
-	/* Imagem de fundo para daFazenda */
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	position: relative;
-	border: 2px solid rgba(100, 255, 11, 0.568);
-	box-shadow: 0px 0px 10px rgb(17, 129, 3);
-	flex-wrap: wrap;
-	/* Permitir que os itens quebrem para a próxima linha em telas menores */
-}
-
-.product-img,
-.mascote-container {
-	flex: 1 0 300px;
-	/* Flex-grow, flex-shrink, e flex-basis */
-	max-width: 700px;
-	/* Limite máximo para a largura */
+#feijão h2 {
+	font-size: 4rem;
 	margin-bottom: 20px;
-	/* Espaçamento inferior */
-	min-height: 200px;
-	/* Altura mínima para manter uma aparência consistente */
-}
-
-/* Imagens fora do carrossel */
-.product-img img {
-	width: 100%;
-	height: auto;
-	max-height: 300px;
-	/* Altura máxima para manter a proporção */
-	object-fit: contain;
-	/* Ajusta a imagem dentro do contêiner sem cortar */
-	border-radius: 5px;
-	/* Bordas arredondadas */
-}
-
-.mascote-container img {
-	margin-top: 30px;
-	width: 100%;
-	height: auto;
-	max-height: 300px;
-	object-fit: contain;
-	border-radius: 5px;
-}
-
-/* Carousel Styles */
-.carousel-daFazenda,
-.carousel-products {
-	position: relative;
-	width: 100%;
-	/* Ocupa a largura total */
-	max-width: 700px;
-	/* Limite máximo para a largura */
-	margin: auto;
-	/* Centraliza o carrossel */
-	overflow: hidden;
-	/* Oculta os itens fora do carrossel */
-	border-radius: 10px;
-	/* Bordas arredondadas */
-}
-
-/* Ajustar itens do carrossel para 100% em telas pequenas */
-.carousel-inner-daFazenda,
-.carousel-inner-products {
-	display: flex;
-	/* Alinhamento em linha */
-	transition: transform 0.5s ease;
-	/* Transição suave */
-}
-
-/* Carousel Item Styles */
-.carousel-item-daFazenda,
-.carousel-item {
+	/* Ajuste de espaçamento entre o título e o próximo elemento */
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	/* Define como "black" */
 	display: flex;
 	flex-direction: column;
+	/* Organiza as palavras na vertical */
 	align-items: center;
 	/* Centraliza horizontalmente */
 	justify-content: center;
 	/* Centraliza verticalmente */
 	text-align: center;
-	/* Centraliza o texto */
-	padding: 10px;
-	/* Espaçamento interno */
 }
 
-.carousel-item-daFazenda img,
-.carousel-item img {
-	width: 100%;
-	/* Ajusta a largura da imagem */
+#feijão h2 .amarelo {
+	color: #FFD700;
+	/* Cor amarela */
+	margin-bottom: 5px;
+	/* Espaçamento entre as palavras */
+}
+
+#feijão h2 .branco {
+	color: #FFFFFF;
+	/* Cor branca */
+}
+
+.feijao-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	/* Espaçamento entre os itens */
+}
+
+.feijao-item {
+	display: flex;
+	/* Torna o item um container flex */
+	flex-direction: column;
+	/* Organiza os filhos (h2 e img) na vertical */
+	align-items: center;
+	/* Centraliza horizontalmente */
+	justify-content: center;
+	/* Centraliza verticalmente */
+	flex: 1 1 300px;
+	/* Base de 300px e ajustável */
+	max-width: 300px;
+	/* Limita o tamanho dos itens menores */
+	text-align: center;
+	border-radius: 10px;
+	padding: 20px;
+	height: 100%;
+	/* Garante que a altura preencha o espaço disponível */
+}
+
+.feijao-destaque {
+	flex: 2 1 450px;
+	/* Maior tamanho para o item de destaque */
+	max-width: 700px;
+	/* Limita o crescimento do item maior */
+}
+
+.feijao-item img {
+	width: 80%;
+	/* Reduz a largura da imagem para balancear com o texto */
+	border-radius: 10px;
 	height: auto;
 	/* Mantém a proporção da imagem */
-	max-height: 300px;
-	/* Altura máxima das imagens */
-	object-fit: contain;
-	/* Ajusta a imagem sem cortar */
-	border-radius: 5px;
-	/* Bordas arredondadas */
+	margin-top: 20px;
+	/* Espaçamento entre o título e a imagem */
 }
 
-.carousel-item-daFazenda p,
-.carousel-item p {
-	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
+.feijao-item h3 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+
+.feijao-item p {
+	font-weight: 700;
 	margin-top: 10px;
-	/* Espaçamento entre a imagem e o texto */
-	font-size: 14px;
-	/* Tamanho da fonte do parágrafo */
-	color: #333;
-	/* Cor do texto */
-	background-color: rgba(255, 255, 255, 0.658);
-	/* Fundo branco com leve transparência */
-	padding: 15px;
-	/* Espaçamento interno */
-	border-radius: 5px;
-	/* Bordas arredondadas */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	/* Sombra leve */
-	line-height: 1.5;
-	/* Espaçamento entre linhas */
-	transition: transform 0.3s ease;
-	/* Efeito ao passar o mouse */
+	font-size: 2rem;
+	color: #FFD700;
 }
 
-.carousel-item-daFazenda p:hover,
-.carousel-item p:hover {
-	transform: translateY(-2px);
-	/* Levanta o parágrafo ao passar o mouse */
-}
-
-
-/* Control Styles */
-.carousel-control-daFazenda,
-.carousel-control-products {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: rgba(0, 0, 0, 0.5);
-	/* Fundo escuro */
-	color: white;
-	/* Cor do texto */
-	padding: 8px;
-	/* Tamanho do botão */
-	cursor: pointer;
-	border-radius: 50%;
-	/* Botões arredondados */
-	z-index: 1000;
-	/* Para garantir que fiquem acima de outros elementos */
-	transition: background-color 0.3s;
-	/* Efeito de transição suave */
-}
-
-.carousel-control-daFazenda.prev,
-.carousel-control-products.prev {
-	left: 10px;
-	/* Posição do botão anterior */
-}
-
-.carousel-control-daFazenda.next,
-.carousel-control-products.next {
-	right: 10px;
-	/* Posição do botão próximo */
-}
-
-/* Responsive Styles */
+/* Responsividade */
 @media (max-width: 768px) {
+	.feijao-container {
+		flex-wrap: wrap;
+	}
 
-	.carousel-item-daFazenda,
-	.carousel-item {
-		flex: 0 0 50%;
-		/* 2 itens para telas menores que 768px */
+	.feijao-item,
+	.feijao-destaque {
+		flex: 1 1 100%;
+		/* Ocupa toda a largura */
+		max-width: 100%;
 	}
 }
 
 @media (max-width: 480px) {
+	.feijao-container {
+		flex-direction: column;
+		/* Empilha os itens */
+		align-items: center;
+		/* Centraliza os itens horizontalmente */
+		justify-content: center;
+		/* Centraliza os itens verticalmente */
+		gap: 30px;
+		/* Maior espaçamento entre itens */
+	}
 
-	.carousel-item-daFazenda,
-	.carousel-item {
-		flex: 0 0 50%;
-		/* 1 item para telas menores que 480px */
+	.feijao-item img {
+		margin: 0 auto;
+		/* Garante alinhamento central */
 	}
 }
 
-/* Responsive Styles */
-@media (min-width: 769px) {
+/* End Feijão Section */
 
-	.carousel-item-daFazenda,
-	.carousel-item {
-		flex: 0 0 33%;
-		/* 2 itens para telas menores que 768px */
+
+
+/* Farinha Section */
+#farinha {
+	background-image: url('/assets/img/back3.png');
+	background-size: cover;
+	background-position: center;
+	padding: 50px 20px;
+	text-align: center;
+	color: #181885;
+	/* Cor das letras */
+}
+
+#farinha h2{
+	font-size: 4rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	/* Poppins Black */
+	color: #181885;
+	/* Cor das letras */
+}
+#farinha h3 {
+	font-size: 2rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800;
+	color: #181885;
+	/* Cor das letras */
+}
+
+.farinha-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.farinha-item {
+	background: rgba(255, 255, 255, 0);
+	border-radius: 10px;
+	padding: 15px;
+	width: 30%;
+	max-width: 300px;
+	text-align: center;
+	color: #181885;
+	/* Cor das letras */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* Centraliza o conteúdo verticalmente */
+}
+
+.farinha-item img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.farinha-item p {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	/* Poppins Medium */
+	margin-top: 10px;
+	font-size: 1.8rem;
+	color: #181885;
+	/* Cor das letras */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+	.farinha-item {
+		width: 80%;
 	}
 }
+
+@media (max-width: 480px) {
+	.farinha-container {
+		flex-direction: column;
+	}
+
+	.farinha-item {
+		justify-content: center;
+		/* Garante que o conteúdo fique centralizado em telas menores */
+		text-align: center;
+	}
+}
+
+/* End Farinha Section */
+
+
 
 /* Services Section */
+#services {
+	background-image: url(/assets/img/back4.png);
+	background-size: cover;
+	background-position: center;
+	padding: 40px 0;
+	position: relative;
+	z-index: -1;
+}
+
+#services::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	/* Espessura da borda */
+	background-color: #317b2e;
+	/* Cor da borda */
+}
+
+/* Centraliza os itens no layout */
 #services .services {
+	display: flex;
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-	padding: 20px 0;
 }
 
+/* Parte superior da seção */
 #services .service-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
 
+/* Parte inferior da seção */
 #services .service-bottom {
 	display: flex;
 	align-items: center;
@@ -511,6 +492,7 @@ p {
 	margin-top: 50px;
 }
 
+/* Itens individuais */
 #services .service-item {
 	flex-basis: 80%;
 	display: flex;
@@ -519,11 +501,10 @@ p {
 	flex-direction: column;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/img-1.png);
 	background-size: cover;
 	margin: 10px 5%;
 	position: relative;
-	z-index: 1;
+	z-index: -1;
 	overflow: hidden;
 }
 
@@ -539,29 +520,24 @@ p {
 	z-index: -1;
 }
 
+/* Ícones */
 #services .service-bottom .icon {
 	display: flex;
-	/* Para alinhar o conteúdo se necessário */
 	justify-content: center;
 	align-items: center;
-	/* Adiciona alinhamento vertical */
 	height: 160px;
 	width: 160px;
 	margin-bottom: 10px;
 	overflow: hidden;
-	/* Oculta qualquer parte que ultrapasse as dimensões definidas */
 }
 
 #services .service-bottom .icon img {
-	/* Se seus ícones forem imagens */
 	max-width: 100%;
-	/* Para garantir que a imagem não ultrapasse a largura do contêiner */
 	max-height: 100%;
-	/* Para garantir que a imagem não ultrapasse a altura do contêiner */
 	object-fit: contain;
-	/* Mantém a proporção da imagem sem cortá-la */
 }
 
+/* Títulos dos itens */
 #services .service-item h2 {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 900;
@@ -571,6 +547,7 @@ p {
 	text-transform: uppercase;
 }
 
+/* Parágrafos */
 #services .service-item p {
 	color: rgb(5, 5, 5);
 	text-align: left;
@@ -578,109 +555,97 @@ p {
 
 /* End Services Section */
 
-
 /* Tradition Section */
 #tradition {
-	/* height: 100vh; */
-	padding: 60px 20px;
-	/* Espaçamento superior e inferior com margem lateral */
-	background-color: #ffe15a;
-	/* Cor de fundo suave e clara */
+	padding: 60px 20px 0;
+	background-color: #317b2e;
 	text-align: center;
-	/* Centraliza o texto por padrão */
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-	/* Sombra ao redor da seção */
-	border-radius: 10px;
-	/* Bordas arredondadas da seção */
-	margin: 20px 0;
-	/* Margem entre seções */
-}
-
-#tradition div {
-	max-width: 1200px;
-	/* Limita a largura máxima da seção */
-	margin: 0 auto;
-	/* Centraliza o conteúdo */
+	position: relative;
 	display: flex;
-	/* Usa Flexbox para alinhamento horizontal */
 	flex-direction: column;
-	/* Organiza itens em coluna para telas menores */
 	align-items: center;
-	/* Centraliza itens na horizontal */
+	box-sizing: border-box;
+	min-height: 100vh;
+	justify-content: flex-start;
 }
 
-#tradition div>div {
-	flex: 1;
-	/* Permite que as divs internas ocupem espaço igual */
-	display: flex;
-	/* Usar Flexbox para alinhamento interno */
-	justify-content: center;
-	/* Centraliza o conteúdo horizontalmente */
-	align-items: center;
-	/* Centraliza o conteúdo verticalmente */
-}
-
-#tradition img {
+/* Borda ondulada na parte superior */
+#tradition::before {
+	content: "";
+	display: block;
 	width: 100%;
-	/* A imagem ocupa toda a largura do contêiner */
-	max-width: 100%;
-	/* Limita a largura máxima da imagem para 100% do contêiner */
-	max-height: 400px;
-	/* Limita a altura máxima da imagem */
-	object-fit: cover;
-	/* Cobre o espaço do contêiner sem distorcer */
-	border-radius: 15px;
-	/* Bordas arredondadas na imagem */
-	transition: transform 0.3s ease;
-	/* Efeito de transição ao passar o mouse */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-	/* Sombra leve na imagem */
+	height: 100px;
+	background: url('wave.svg') no-repeat center top;
+	background-size: cover;
+	position: absolute;
+	top: -60px;
+	left: 0;
 }
 
-#tradition img:hover {
-	transform: scale(1.05);
-	/* Aumenta a imagem ao passar o mouse */
-}
-
-
-
-#tradition p {
-	font-size: 1.8rem;
-	/* Aumenta o tamanho da fonte do parágrafo */
-	font-weight: bold;
-	/* Deixa o texto mais grosso */
-	color: #000000;
-	/* Cor do texto */
-	line-height: 1.7;
-	/* Altura da linha para melhor legibilidade */
+/* Conteúdo do texto */
+#tradition .text-content {
 	max-width: 800px;
-	/* Limita a largura máxima do texto */
-	margin-bottom: 15px;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	text-align: justify;
-	margin-top: -20px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	/* Ajuste do espaço entre o texto e as imagens */
 }
 
-/* Responsivo */
+#tradition .text-content h1 {
+	font-size: 4.5rem;
+	font-weight: bold;
+	color: #fbff02;
+}
+
+#tradition .text-content p {
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: #ffffff;
+	line-height: 1.7;
+	font-family: 'Poppins', sans-serif;
+	margin: 15px 20px;
+	text-align: justify;
+}
+
+/* Bloco das imagens fixo no rodapé */
+#tradition .image-block {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	gap: 0;
+	/* Sem espaçamento entre as imagens */
+	width: 100%;
+	margin-top: auto;
+	/* Empurra as imagens para o final da seção */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 0;
+	/* Remove qualquer espaçamento da borda esquerda */
+}
+
+#tradition .family-image {
+	width: 100%;
+	object-fit: cover;
+	margin-left: 0;
+	/* A imagem ocupa 50% da largura */
+}
+
+
+/* Responsivo para telas maiores */
 @media (min-width: 768px) {
 	#tradition {
-		flex-direction: row;
-		/* Organiza itens em linha para telas maiores */
-		align-items: flex-start;
-		/* Alinha itens na parte superior da seção */
+		padding-bottom: 0;
+		/* Remove o padding extra para o responsivo */
 	}
 
-	#tradition div>div {
-		flex: 1;
-		/* Permite que a imagem ocupe uma fração do espaço */
-		margin: 0 20px;
-		/* Espaçamento entre a imagem e o texto */
+	#tradition .family-image {
+		width: 65%;
+		/* A imagem continua com 55% da largura */
 	}
 
-	#tradition img {
-		max-height: 300px;
-		/* Ajuste a altura da imagem para telas maiores, se necessário */
+	#tradition .text-content p {
+		font-size: 1.8rem;
+
 	}
 }
 
@@ -688,41 +653,70 @@ p {
 
 
 /* About Section */
-#about .about {
-	flex-direction: column-reverse;
-	text-align: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px 0;
+#about {
+	width: 100vw;
+	/* Ocupa toda a largura da tela */
+	margin: 0;
+	padding: 0;
 }
 
-#about p {
-	font-size: 1.8rem;
-	/* Aumenta o tamanho da fonte do parágrafo */
-	font-weight: bold;
-	/* Deixa o texto mais grosso */
-	color: #000000;
-	/* Cor do texto */
-	line-height: 1.7;
-	/* Altura da linha para melhor legibilidade */
-	max-width: 800px;
-	/* Limita a largura máxima do texto */
-	margin: 20px auto;
-	/* Margem centralizada */
-	padding: 0 18px;
-	font-family: 'Poppins', sans-serif;
-	text-align: justify;
-	/* Justifica o texto */
-	margin-top: -20px;
+#about .about {
+	background-image: url('/assets/img/BACKGROUND PLANTAÇÃO DE MANDIOCA.jpg');
+	background-size: cover;
+	background-position: center top;
+	text-align: center;
+	padding: 40px 20px;
+	position: relative;
+	min-height: 100vh;
+	/* Garante que cubra toda a altura da viewport */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #about .col-left {
 	width: 250px;
-	height: 360px;
+	height: auto;
+	/* Permite ajuste automático da altura */
+	margin-bottom: 20px;
+	/* Espaço entre a logo e a caixa de texto */
+}
+
+#about .col-left img {
+	width: 60%;
 }
 
 #about .col-right {
-	width: 100%;
+	background-color: rgba(255, 255, 255, 0.733);
+	/* Fundo branco semi-transparente */
+	padding-top: 5px;
+	border-radius: 8px;
+	/* Bordas arredondadas */
+	max-width: 450px;
+	/* Caixa de texto mais estreita */
+	margin: 0 auto;
+	text-align: center;
+	/* Centraliza o conteúdo dentro da caixa de texto */
+}
+
+#about .col-right h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #ec6d06;
+	/* Cor laranja para o título */
+	margin-bottom: -35px;
+	/* Menos espaço entre o título e o parágrafo */
+}
+
+#about .col-right p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #000;
+	line-height: 1.7;
+	font-family: 'Poppins', sans-serif;
+	text-align: justify;
+	margin: 10px 0;
+	padding: 0 15px;
 }
 
 #about .col-right h2 {
@@ -730,10 +724,6 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	margin-bottom: 10px;
-}
-
-#about .col-right p {
-	margin-bottom: 20px;
 }
 
 #about .col-right .cta {
@@ -747,7 +737,7 @@ p {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 10px solid white;
+
 }
 
 #about .col-left .about-img::after {
@@ -760,6 +750,24 @@ p {
 	border: 7px solid rgb(247, 222, 4);
 	z-index: -1;
 }
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+	#about .about {
+		flex-direction: column;
+		/* Logo em cima e caixa de texto embaixo */
+	}
+}
+
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+	#about .about {
+		flex-direction: column;
+		/* Logo em cima e caixa de texto embaixo */
+	}
+}
+
 
 /* End About Section */
 
@@ -815,7 +823,6 @@ p {
 
 /*End contact Section */
 
-/* Footer */
 /* Footer */
 #footer {
 	background-image: linear-gradient(60deg,
@@ -946,6 +953,7 @@ p {
 		color: #006627;
 	}
 }
+
 @keyframes text_reveal_h2 {
 	100% {
 		color: #f7f7f7;
@@ -968,60 +976,6 @@ p {
 	h1.section-title {
 		font-size: 4rem;
 	}
-
-	/* Hero */
-	#hero {
-		text-align: center;
-	}
-
-	#hero h1 {
-		font-family: 'Poppins', sans-serif;
-		font-weight: bold;
-		text-align: center;
-		display: block;
-		position: relative;
-		color: transparent;
-		animation: text_reveal 0.5s ease forwards;
-		animation-delay: 1s;
-	}
-
-	#hero h1:nth-child(1) {
-		font-size: 6.5rem;
-		text-align: center;
-		margin-top: 250px;
-		animation-delay: 1s;
-	}
-
-	#hero h1:nth-child(2) {
-		font-size: 3.8rem;
-		text-align: center;
-		margin-top: 40px;
-		animation-delay: 2s;
-
-	}
-
-	#hero h1:nth-child(3) {
-		font-size: 3.8rem;
-		text-align: center;
-		margin-top: 10px;
-		animation-delay: 3s;
-
-	}
-
-	#hero h2 {
-		text-align: center;
-		font-size: 3rem;
-		margin-top: 35px;
-		text-align: center;
-	}
-
-	.img-mascote {
-		width: 50%;
-		float: right;
-		margin-top: 150px;
-	}
-
-	/* End Hero */
 
 	/* Services Section */
 	#services .service-bottom .service-item {
@@ -1082,7 +1036,7 @@ p {
 	}
 
 	#about .col-right h1 {
-		text-align: left;
+		text-align: center;
 	}
 
 	/* End About */
@@ -1159,25 +1113,14 @@ p {
 	}
 
 	/* End header */
-
-	#hero {
-		text-align: center;
-	}
-
-	.img-mascote {
-
-		width: 50%;
-		float: right;
-		margin-top: 150px;
-	}
-
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 }
-
 /* End  Media Query For Desktop */
+
+
 .whatsapp-button {
 	display: inline-block;
 	padding: 20px 30px;
@@ -1202,4 +1145,37 @@ p {
 .whatsapp-button:hover {
 	background-color: #128C7E;
 	/* Cor do WhatsApp ao passar o mouse */
+}
+
+.whatsapp-mascote-button {
+	position: fixed;
+	bottom: 60px;
+	right: 80px;
+	width: 60px;
+	height: 60px;
+	border-radius: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	/* animation: pulse 1.5s infinite ease-in-out; */
+}
+
+.whatsapp-mascote-button img {
+	width: 180px;
+	height: 120px;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }

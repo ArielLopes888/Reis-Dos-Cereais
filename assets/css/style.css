@@ -178,6 +178,16 @@ p {
 	color: #0d0d0e;
 }
 
+/* Fundo amarelo para o botão "Contato" */
+#header .nav-list ul li:last-child a {
+	background-color: yellow;
+	padding: 02px 10px; /* Ajusta o espaçamento interno */
+	border-radius: 5px; /* Deixa o botão arredondado */
+}
+
+#header .nav-list ul li:last-child a:hover {
+	background-color: #ffd700; /* Fundo mais escuro no hover */
+}
 /* End Header section */
 
 /* Hero Section */
@@ -371,7 +381,7 @@ p {
 	/* Cor das letras */
 }
 
-#farinha h2{
+#farinha h2 {
 	font-size: 4rem;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
@@ -379,6 +389,7 @@ p {
 	color: #181885;
 	/* Cor das letras */
 }
+
 #farinha h3 {
 	font-size: 2rem;
 	font-family: 'Poppins', sans-serif;
@@ -432,7 +443,7 @@ p {
 	}
 }
 
-@media (max-width: 380px) {
+@media (max-width: 280px) {
 	.farinha-container {
 		flex-direction: column;
 		justify-content: center;
@@ -446,8 +457,6 @@ p {
 }
 
 /* End Farinha Section */
-
-
 
 /* Services Section */
 #services {
@@ -499,9 +508,12 @@ p {
 #services .service-item {
 	flex-basis: 80%;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
+	/* Alinha centralmente no eixo vertical */
 	justify-content: center;
+	/* Alinha centralmente no eixo horizontal */
 	flex-direction: column;
+	/* Organiza título e parágrafo verticalmente */
 	padding: 30px;
 	border-radius: 10px;
 	background-size: cover;
@@ -509,6 +521,8 @@ p {
 	position: relative;
 	z-index: -1;
 	overflow: hidden;
+	text-align: center;
+	/* Garante alinhamento centralizado */
 }
 
 #services .service-item::after {
@@ -524,18 +538,8 @@ p {
 }
 
 /* Ícones */
-#services .service-bottom .icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 160px;
-	width: 160px;
-	margin-bottom: 10px;
-	overflow: hidden;
-}
-
 #services .service-bottom .icon img {
-	max-width: 100%;
+	max-width: 40%;
 	max-height: 100%;
 	object-fit: contain;
 }
@@ -545,7 +549,7 @@ p {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 900;
 	font-size: 2rem;
-	color: #006627;
+	color: #181885;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
@@ -553,7 +557,9 @@ p {
 /* Parágrafos */
 #services .service-item p {
 	color: rgb(5, 5, 5);
-	text-align: left;
+	text-align: center;
+	max-width: 90%;
+	/* Garante que o texto não se estenda além da largura */
 }
 
 /* End Services Section */
@@ -595,6 +601,7 @@ p {
 
 #tradition .text-content h1 {
 	font-size: 4.5rem;
+	/* Tamanho padrão para telas grandes */
 	font-weight: bold;
 	color: #fbff02;
 }
@@ -630,39 +637,46 @@ p {
 	width: 100%;
 	object-fit: cover;
 	margin-left: 0;
-	/* A imagem ocupa 50% da largura */
 }
-
 
 /* Responsivo para telas maiores */
 @media (min-width: 768px) {
 	#tradition {
 		padding-bottom: 0;
-		/* Remove o padding extra para o responsivo */
 	}
 
 	#tradition .family-image {
 		width: 65%;
-		/* A imagem continua com 55% da largura */
+		/* A imagem ocupa 65% da largura */
 	}
 
 	#tradition .text-content p {
 		font-size: 1.5rem;
-
-	}
-	#tradition .text-content h1 {
-		font-size: 2.5rem;
 	}
 }
 
-@media (min-width: 368px) {
-
+/* Responsivo para telas médias */
+@media (max-width: 767px) {
 	#tradition .text-content h1 {
 		font-size: 2.5rem;
+		/* Reduz o tamanho do título */
 	}
 }
 
-/* End Tradition Section */
+/* Responsivo para telas menores */
+@media (max-width: 480px) {
+	#tradition .text-content p {
+		font-size: 1.5rem;
+		line-height: 1.5;
+		/* Ajusta a legibilidade do texto */
+	}
+
+	#tradition .family-image {
+		width: 100%;
+		/* Garante que a imagem ocupe 100% da largura */
+	}
+}
+
 
 
 /* About Section */
@@ -771,6 +785,7 @@ p {
 		/* Logo em cima e caixa de texto embaixo */
 	}
 }
+
 /* End About Section */
 
 /* contact Section */
@@ -915,6 +930,7 @@ p {
 .heart {
 	color: #ff0202;
 }
+
 /* End Footer */
 
 /* Keyframes */
@@ -981,6 +997,7 @@ p {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
+
 	/* End Services Section */
 
 	/* About */
@@ -1090,6 +1107,7 @@ p {
 		margin: 1.5%;
 	}
 }
+
 /* End  Media Query For Desktop */
 
 

@@ -62,7 +62,7 @@ p {
 }
 
 .logo-img {
-	width: 150px;
+	width: 100px;
 	height: auto;
 	margin-bottom: 0px;
 }
@@ -428,12 +428,14 @@ p {
 @media (max-width: 768px) {
 	.farinha-item {
 		width: 80%;
+		justify-content: center;
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
 	.farinha-container {
 		flex-direction: column;
+		justify-content: center;
 	}
 
 	.farinha-item {
@@ -645,8 +647,18 @@ p {
 	}
 
 	#tradition .text-content p {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 
+	}
+	#tradition .text-content h1 {
+		font-size: 2.5rem;
+	}
+}
+
+@media (min-width: 368px) {
+
+	#tradition .text-content h1 {
+		font-size: 2.5rem;
 	}
 }
 
@@ -759,17 +771,6 @@ p {
 		/* Logo em cima e caixa de texto embaixo */
 	}
 }
-
-
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-	#about .about {
-		flex-direction: column;
-		/* Logo em cima e caixa de texto embaixo */
-	}
-}
-
-
 /* End About Section */
 
 /* contact Section */
@@ -914,12 +915,9 @@ p {
 .heart {
 	color: #ff0202;
 }
-
 /* End Footer */
 
 /* Keyframes */
-
-
 @keyframes pulse {
 	0% {
 		border-color: rgb(4, 89, 247);
@@ -983,34 +981,7 @@ p {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-
 	/* End Services Section */
-
-	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-
-	#projects .project-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-
-	#projects .all-projects .project-img {
-		height: 100%;
-	}
-
-	/* End Project */
 
 	/* About */
 	#about .about {

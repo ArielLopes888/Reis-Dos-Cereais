@@ -194,7 +194,7 @@ p {
 #hero {
 	height: 100vh;
 	text-align: center;
-	background-image: url(/assets/img/DOBRA\ 1\ -\ A.png);
+	background-image: url(/assets/img/back1.png);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -239,7 +239,7 @@ p {
 
 /* Feijão Section */
 #feijão {
-	background-image: url('/assets/img/BACKGROUND\ BEIJÃO.png');
+	background-image: url('/assets/img/back2.png');
 	background-size: cover;
 	background-position: center;
 	padding: 50px 20px;
